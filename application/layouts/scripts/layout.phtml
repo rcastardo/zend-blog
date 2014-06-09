@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Zend Blog">
+    <meta name="author" content="Washington Silva">
+
+    <?php echo $this->headTitle('Blog'); ?>
+
+    <!-- Bootstrap -->
+    <?php echo $this->headLink()->appendStylesheet('/assets/bootstrap3/css/bootstrap.css') ?>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- [if lt IE 9] -->
+    <?php echo $this->headScript()->prependFile('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js') ?>
+    <?php echo $this->headScript()->prependFile('https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js') ?>
+    <!-- [endif] -->
+
+    <!-- custom.css-->
+    <?php echo $this->headLink()->appendStylesheet('/assets/css/custom.css') ?>
+
+
+</head>
+<body">
+
+<?php include 'navbar.phtml'?>
+
+<div class="container-fluid" style="padding: 0; margin-top: 50px">
+    <?php echo $this->layout()->content ?>
+</div>
+
+<?php include 'footer.phtml'?>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<?php echo $this->inlineScript()->prependFile('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js') ?>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<?php echo $this->inlineScript()->prependFile('/assets/bootstrap3/js/bootstrap.js') ?>
+<!-- custom.js -->
+<?php echo $this->inlineScript()->prependFile('/assets/js/custom.js') ?>
+
+
+</body>
+
+
+</html>
